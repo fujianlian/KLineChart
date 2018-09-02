@@ -2,13 +2,13 @@
 
 Android仿火币K线图实现（包含MA,BOLL,MACD,KDJ,RSI,WR指标）
 
-本项目是在 [tifezh的KChartView](https://github.com/tifezh/KChartView) 基础上进行修改的，新增了KDJ和WR指标，对UI展示进行了修改。
+本项目是在 [tifezh的KChartView](https://github.com/tifezh/KChartView) 基础上进行修改的，新增了KDJ、WR指标、最大值和最小值展示，对UI展示进行了修改。
 
-![](https://github.com/fujianlian/KLineChart/tree/master/img/1.png) 
- 
-![](https://github.com/fujianlian/KLineChart/tree/master/img/2.png) 
+![](https://github.com/fujianlian/KLineChart/raw/master/img/1.png) 
 
-![](https://github.com/fujianlian/KLineChart/tree/master/img/3.png) 
+![](https://github.com/fujianlian/KLineChart/raw/master/img/2.png) 
+
+![](https://github.com/fujianlian/KLineChart/raw/master/img/3.png) 
 
 ## 配置使用
 
