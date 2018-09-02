@@ -6,7 +6,6 @@
     android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/text1"
         android:layout_width="50dp"
@@ -113,22 +112,37 @@
         android:text="隐藏"
         android:textColor="@color/white" />
 
+
+    <TextView
+        android:id="@+id/fenText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text2"
+        android:gravity="center"
+        android:text="分时"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/kText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/text1"
+        android:gravity="center"
+        android:text="k线图"
+        android:textColor="@color/colorAccent" />
+
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:layout_below="@+id/text2"
+        android:layout_below="@+id/fenText"
         android:background="#17181f" />
 
     <com.github.fujianlian.klinechart.KLineChartView
         android:id="@+id/kLineChartView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view1" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_below="@+id/kLineChartView"
-        android:background="#17181f" />
 </RelativeLayout>

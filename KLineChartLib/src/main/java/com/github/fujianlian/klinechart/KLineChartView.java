@@ -413,6 +413,7 @@ public class KLineChartView extends BaseKLineChartView {
 
     public void setMainDrawLine(boolean isLine) {
         mMainDraw.setLine(isLine);
+        invalidate();
     }
 
     private int startX;

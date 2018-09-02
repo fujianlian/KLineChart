@@ -93,5 +93,15 @@ class MainActivity : AppCompatActivity() {
             subIndex = -1
             kLineChartView.hideChildDraw()
         }
+        fenText.setOnClickListener {
+            fenText.textColor = Color.parseColor("#eeb350")
+            kText.textColor = Color.WHITE
+            kLineChartView.setMainDrawLine(true)
+        }
+        kText.setOnClickListener {
+            kText.textColor = Color.parseColor("#eeb350")
+            fenText.textColor = Color.WHITE
+            kLineChartView.setMainDrawLine(false)
+        }
     }
 }
