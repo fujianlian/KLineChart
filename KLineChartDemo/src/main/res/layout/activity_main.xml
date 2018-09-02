@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="主图"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/maText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/text1"
+        android:gravity="center"
+        android:text="MA"
+        android:textColor="@color/colorAccent" />
+
+
+    <TextView
+        android:id="@+id/bollText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/maText"
+        android:gravity="center"
+        android:text="BOLL"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/mainHide"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/bollText"
+        android:gravity="center"
+        android:text="隐藏"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="副图"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/macdText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/text2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/text2"
+        android:gravity="center"
+        android:text="MACD"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/kdjText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/macdText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/macdText"
+        android:gravity="center"
+        android:text="KDJ"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/rsiText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/kdjText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/kdjText"
+        android:gravity="center"
+        android:text="RSI"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/wrText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/rsiText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/rsiText"
+        android:gravity="center"
+        android:text="WR"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/subHide"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/wrText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/wrText"
+        android:gravity="center"
+        android:text="隐藏"
+        android:textColor="@color/white" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/text2"
+        android:background="#17181f" />
+
+    <com.github.fujianlian.klinechart.KLineChartView
+        android:id="@+id/kLineChartView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/view1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/kLineChartView"
+        android:background="#17181f" />
+</RelativeLayout>
