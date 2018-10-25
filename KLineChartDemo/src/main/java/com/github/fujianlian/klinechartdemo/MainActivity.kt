@@ -1,8 +1,8 @@
 package com.github.fujianlian.klinechartdemo
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import com.github.fujianlian.klinechart.DataHelper
 import com.github.fujianlian.klinechart.KLineChartAdapter
@@ -12,7 +12,7 @@ import com.github.fujianlian.klinechart.formatter.DateFormatter
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.textColor
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     // 主图指标下标
     private var subIndex = 0
     // 副图指标下标
-    private var mainIndex = -1
+    private var mainIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,9 +89,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         subHide.setOnClickListener {
-            subTexts[subIndex].textColor = Color.WHITE
-            subIndex = -1
-            kLineChartView.hideChildDraw()
+            if (subIndex != -1) {
+                subTexts[subIndex].textColor = Color.WHITE
+                subIndex = -1
+                kLineChartView.hideChildDraw()
+            }
         }
         fenText.setOnClickListener {
             fenText.textColor = Color.parseColor("#eeb350")
