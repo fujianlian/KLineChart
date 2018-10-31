@@ -246,7 +246,7 @@ public class DataHelper {
             }
             if (i == 59) {
                 point.MA60Price = ma60 / 60f;
-            } else if (i >= 59) {
+            } else if (i >= 60) {
                 ma60 -= dataList.get(i - 60).getClosePrice();
                 point.MA60Price = ma60 / 60f;
             } else {
@@ -290,7 +290,7 @@ public class DataHelper {
             }
 
             if (i == 9) {
-                entry.MA5Volume = volumeMa10 / 10f;
+                entry.MA10Volume = volumeMa10 / 10f;
             } else if (i > 9) {
                 volumeMa10 -= entries.get(i - 10).getVolume();
                 entry.MA10Volume = volumeMa10 / 10f;
