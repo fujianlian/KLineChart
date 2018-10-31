@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
 
     private val subTexts: ArrayList<TextView> by lazy { arrayListOf(macdText, kdjText, rsiText, wrText) }
     // 主图指标下标
-    private var subIndex = 0
-    // 副图指标下标
     private var mainIndex = 0
+    // 副图指标下标
+    private var subIndex = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun initListener() {
         maText.setOnClickListener {
             if (mainIndex != 0) {
+                kLineChartView.hideSelectData()
                 mainIndex = 0
                 maText.textColor = Color.parseColor("#eeb350")
                 bollText.textColor = Color.WHITE
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
         bollText.setOnClickListener {
             if (mainIndex != 1) {
+                kLineChartView.hideSelectData()
                 mainIndex = 1
                 bollText.textColor = Color.parseColor("#eeb350")
                 maText.textColor = Color.WHITE
@@ -70,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
         mainHide.setOnClickListener {
             if (mainIndex != -1) {
+                kLineChartView.hideSelectData()
                 mainIndex = -1
                 bollText.textColor = Color.WHITE
                 maText.textColor = Color.WHITE
@@ -79,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         for ((index, text) in subTexts.withIndex()) {
             text.setOnClickListener {
                 if (subIndex != index) {
+                    kLineChartView.hideSelectData()
                     if (subIndex != -1) {
                         subTexts[subIndex].textColor = Color.WHITE
                     }
@@ -90,17 +94,20 @@ class MainActivity : AppCompatActivity() {
         }
         subHide.setOnClickListener {
             if (subIndex != -1) {
+                kLineChartView.hideSelectData()
                 subTexts[subIndex].textColor = Color.WHITE
                 subIndex = -1
                 kLineChartView.hideChildDraw()
             }
         }
         fenText.setOnClickListener {
+            kLineChartView.hideSelectData()
             fenText.textColor = Color.parseColor("#eeb350")
             kText.textColor = Color.WHITE
             kLineChartView.setMainDrawLine(true)
         }
         kText.setOnClickListener {
+            kLineChartView.hideSelectData()
             kText.textColor = Color.parseColor("#eeb350")
             fenText.textColor = Color.WHITE
             kLineChartView.setMainDrawLine(false)

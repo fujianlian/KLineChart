@@ -2,6 +2,7 @@ package com.github.fujianlian.klinechart;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DimenRes;
 import android.support.v4.content.ContextCompat;
@@ -86,8 +87,13 @@ public class KLineChartView extends BaseKLineChartView {
                 setLineWidth(array.getDimension(R.styleable.KLineChartView_kc_line_width, getDimension(R.dimen.chart_line_width)));
                 setBackgroundColor(array.getColor(R.styleable.KLineChartView_kc_background_color, getColor(R.color.chart_bac)));
                 setSelectPointColor(array.getColor(R.styleable.KLineChartView_kc_background_color, getColor(R.color.chart_point_bac)));
-                setSelectedLineColor(array.getColor(R.styleable.KLineChartView_kc_selected_line_color, getColor(R.color.chart_text)));
-                setSelectedLineWidth(array.getDimension(R.styleable.KLineChartView_kc_selected_line_width, getDimension(R.dimen.chart_line_width)));
+
+                setSelectedXLineColor(Color.WHITE);
+                setSelectedXLineWidth(getDimension(R.dimen.chart_line_width));
+
+                setSelectedYLineColor(Color.parseColor("#8040424D"));
+                setSelectedYLineWidth(getDimension(R.dimen.chart_point_width));
+
                 setGridLineWidth(array.getDimension(R.styleable.KLineChartView_kc_grid_line_width, getDimension(R.dimen.chart_grid_line_width)));
                 setGridLineColor(array.getColor(R.styleable.KLineChartView_kc_grid_line_color, getColor(R.color.chart_grid_line)));
                 //macd
@@ -178,6 +184,14 @@ public class KLineChartView extends BaseKLineChartView {
         }
         super.setScrollEnable(mLastScrollEnable);
         super.setScaleEnable(mLastScaleEnable);
+    }
+
+    /**
+     * 隐藏选择器内容
+     */
+    public void hideSelectData() {
+        isLongPress = false;
+        invalidate();
     }
 
     /**

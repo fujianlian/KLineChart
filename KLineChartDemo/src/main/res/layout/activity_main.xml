@@ -144,5 +144,13 @@
         android:id="@+id/kLineChartView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/view2"
         android:layout_below="@+id/view1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="#17181f" />
 </RelativeLayout>
