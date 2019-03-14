@@ -116,5 +116,9 @@ public void setMainDrawLine(boolean isLine) {
 ```
 布局时修改KLineChartView的相关颜色即可
 
+## 展示5分钟、10分钟等分时图
+
+https://github.com/fujianlian/KLineChart/issues/5
+
 ## 具体使用参照KLineChartDemo
 
