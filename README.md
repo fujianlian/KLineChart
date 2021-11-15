@@ -1,4 +1,4 @@
-# KLineChart
+# KLineChart(不再维护)
 
 Android仿火币K线图实现（包含MA,BOLL,MACD,KDJ,RSI,WR指标）
 
